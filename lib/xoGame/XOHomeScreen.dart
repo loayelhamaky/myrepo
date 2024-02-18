@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/xoGame/buttonsXO.dart';
+import 'buttonsXO.dart';
 
 class XOHomescreen extends StatefulWidget {
   @override

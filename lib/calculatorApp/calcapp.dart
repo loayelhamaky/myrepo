@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/calculatorApp/clacbutton.dart';
 import 'calcHomeScreen.dart';
+import 'clacbutton.dart';
 void main() {
 
   runApp( const MyAPPP(

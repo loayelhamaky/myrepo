@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/facebookLogin/Assignment2flutter/post.dart';
-import 'package:untitled2/facebookLogin/Assignment2flutter/storyStack.dart';
+
+import 'post.dart';
+import 'storyStack.dart';
 // import 'package:untitled2/facebookLoginAssignment2flutter/post.dart';
 // import 'package:untitled2/facebookLoginAssignment2flutter/postShape.dart';
 // import 'package:untitled2/facebookLoginAssignment2flutter/reactions.dart';

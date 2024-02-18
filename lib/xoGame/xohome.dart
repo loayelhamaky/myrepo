@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/xoGame/splashScreen.dart';
-
+import 'splashScreen.dart';
 import 'XOHomeScreen.dart';
 /// مكروت الديزاين مش فاضي المهم الفكرة توصل (:
 
