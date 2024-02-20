@@ -17,12 +17,10 @@ class _SplashScreenState extends State<SplaashScreen> {
       Navigator.pushReplacementNamed(context, IslamyHomeScreen.routeName);
     });
   super.initState();
-
 }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: Container(
         child: Image.asset('islami_myapp/assets/splash_screen_light.png',
