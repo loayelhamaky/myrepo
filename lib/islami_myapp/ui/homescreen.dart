@@ -21,10 +21,10 @@ class IslamyHomeScreenState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       body: currentTab,
-      bottomNavigationBar: buildButtomNavigationBar(),
+      bottomNavigationBar: buildBottomNavigationBar(),
     );
   }
-  Theme buildButtomNavigationBar() => Theme(
+   buildBottomNavigationBar() => Theme(
     data: ThemeData(canvasColor: AppColors.orange),
     child: BottomNavigationBar(
       items: [
@@ -35,7 +35,7 @@ class IslamyHomeScreenState extends State {
       ],
       currentIndex: currentTabIndex,
       onTap:(index){currentTabIndex = index;
-      if (index == 0) {currentTab = QuranTabScreen();}
+      if      (index == 0) {currentTab = QuranTabScreen();}
       else if (index == 1) {currentTab = RadioTabScreen();}
       else if (index == 2) {currentTab = SebhaTabScreen();}
       else if (index == 3) {currentTab = HadethTabScreen();}

@@ -60,7 +60,7 @@ class HomescreenWhatsappApp extends StatelessWidget {
                           margin: const EdgeInsets.all(20),
                           child: const CircleAvatar(
                             radius: 30,
-                            backgroundImage: AssetImage('assets/images/img.png'),
+                            backgroundImage: AssetImage('assets/images/tasbeeh.png'),
                           ),
                         ),
                         Expanded(

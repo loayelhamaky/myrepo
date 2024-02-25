@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../colors/colors.dart';
-import 'ss/s.dart';
+import 'suras/suraTab.dart';
+import 'suras/suras_verses.dart';
 
 class QuranTabScreen extends StatefulWidget {
   static String routeName = 'quranTabScreen';
-
   @override
   State<QuranTabScreen> createState() => _QuranTabScreenState();
 }
@@ -12,8 +12,7 @@ class QuranTabScreen extends StatefulWidget {
 class _QuranTabScreenState extends State<QuranTabScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('islami_myapp/assets/main_background.png'),
@@ -36,7 +35,6 @@ class _QuranTabScreenState extends State<QuranTabScreen> {
             ),
           ],
         ),
-      ),
     );
   }
 
@@ -46,7 +44,6 @@ class _QuranTabScreenState extends State<QuranTabScreen> {
       Image.asset('islami_myapp/assets/quran_header_image.png'),
     ],
   );
-
    buildSuraNameAndVersesBar() => Container(
         child: Column(
           children: [
@@ -86,28 +83,34 @@ class _QuranTabScreenState extends State<QuranTabScreen> {
           ],
         ),
       );
-
    buildListItem(int index) => Stack(
     alignment: Alignment.center,
     children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Expanded(
-            child: Text(
-              "${SurasVerses.versesNumber[index]}",
-              style: TextStyle(fontSize: 25),
-              textAlign: TextAlign.center,
+      InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, SuraTab.routeName,
+              arguments:SuraArgs(SuraName:
+              SurasVerses.suraNames[index], SuraContext: '${index+1}.txt') );
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              child: Text(
+                "${SurasVerses.versesNumber[index]}",
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          Expanded(
-            child: Text(
-              SurasVerses.suraNames[index],
-              style: TextStyle(fontSize: 25),
-              textAlign: TextAlign.center,
+            Expanded(
+              child: Text(
+                SurasVerses.suraNames[index],
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       Container(
         color: AppColors.orange,
@@ -119,3 +122,9 @@ class _QuranTabScreenState extends State<QuranTabScreen> {
   );
 }
 
+class SuraArgs {
+  String SuraName;
+  String SuraContext;
+
+  SuraArgs ({required this.SuraName , required this.SuraContext});
+}

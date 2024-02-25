@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../tabs/hadeth.dart';
+import '../tabs/hadeth_tab/hadethTab.dart';
 import '../tabs/quran.dart';
 import '../tabs/radio.dart';
 import '../tabs/sebha.dart';
+import '../tabs/suras/suraTab.dart';
 import 'homescreen.dart';
 import 'splash.dart';
 
@@ -21,6 +23,8 @@ class IslamyApp extends StatelessWidget{
         HadethTabScreen.routeName : (context) => HadethTabScreen(),
         RadioTabScreen.routeName : (context) => RadioTabScreen(),
         SebhaTabScreen.routeName : (context) => SebhaTabScreen(),
+        SuraTab.routeName : (context) => SuraTab(),
+        HadethTab.routeName : (context) => HadethTab(),
       },
       initialRoute: SplaashScreen.routeName,
     );
